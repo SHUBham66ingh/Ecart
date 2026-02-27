@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { ShoppingCart, SlidersHorizontal } from "lucide-react";
+import { useSelector } from "react-redux";
 
 const Navbar = ({ onSort }) => {
   const [showFilter, setShowFilter] = useState(false);
+
+  // 🔥 Get cart count from Redux store
+  const count = useSelector((state) => state.counter.value);
 
   return (
     <header className="w-full bg-gray-900 border-b border-gray-800 shadow-lg relative">
@@ -86,9 +90,9 @@ const Navbar = ({ onSort }) => {
           <ShoppingCart className="w-6 h-6" />
           <span className="font-medium">Cart</span>
 
-          {/* Badge */}
+          {/* 🔥 Dynamic Badge from Redux */}
           <span className="absolute -top-2 -right-3 bg-blue-600 text-white text-xs px-1.5 py-0.5 rounded-full">
-            0
+            {count}
           </span>
         </div>
       </div>
