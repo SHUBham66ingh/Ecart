@@ -50,7 +50,7 @@ const Navbar = ({ onSort }) => {
             }}
             className="flex items-center justify-between px-3 py-2 rounded-md border border-gray-700 bg-gray-800 hover:bg-blue-600 hover:border-blue-500 transition text-sm font-medium text-gray-200"
           >
-            <span> High → Low</span>
+            <span>High→Low</span>
           </button>
 
           <button
@@ -60,7 +60,7 @@ const Navbar = ({ onSort }) => {
             }}
             className="flex items-center justify-between px-3 py-2 rounded-md border border-gray-700 bg-gray-800 hover:bg-blue-600 hover:border-blue-500 transition text-sm font-medium text-gray-200"
           >
-            <span>Low → High</span>
+            <span>Low→High</span>
           </button>
 
           {/* Dropdown */}
